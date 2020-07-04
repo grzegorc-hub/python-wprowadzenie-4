@@ -3,7 +3,7 @@ S1 = [1, 2, 3] + [4, 5, 6]
 S2 = ['Ni!'] * 4
 print(S1, S2)
 
-N = [5,6]
+N = [5, 6]
 S3 = str([1, 2]) + "34"
 S4 = [1, 2] + list("34")
 S5 = str(N) + "999"
@@ -14,9 +14,9 @@ L = list(map(abs, [-1, -2, 0, 1, 2]))
 print(L)
 
 L = ['mielonka', 'Mielonka', 'MIELONKA!']
-L[1] = 'jajka' # Przypisanie do indeksu
+L[1] = 'jajka'  # Przypisanie do indeksu
 print(L)
-L[0:2] = ['najsmaczniejsza', 'jest'] # Przypisanie do wycinka: usunięcie i wstawienie
+L[0:2] = ['najsmaczniejsza', 'jest']  # Przypisanie do wycinka: usunięcie i wstawienie
 print(L)
 
 L.append('sortowana')
@@ -30,8 +30,8 @@ L = ['abc', 'ABD', 'aBe']
 L = sorted(L, key=str.lower, reverse=True)
 print(L)
 
-L = [1,2]
-L.extend([3,4,1])
+L = [1, 2]
+L.extend([3, 4, 1])
 print(L)
 L.pop()
 print(L.pop())
@@ -84,15 +84,15 @@ print(D.get('tost'))
 print(D.get('tost', 88))
 
 D1 = {'jajka': 3, 'szynka': 1, 'mielonka': 2}
-D2 = {'tost':4, 'ciastko':5}
+D2 = {'tost': 4, 'ciastko': 5}
 D1.update(D2)
-#D3 = D1 + D2 not working
+# D3 = D1 + D2 not working
 print(D1)
 D1.pop('tost')
 print(D1)
 
 L = []
-#L[99] = 'mielonka'
+# L[99] = 'mielonka'
 D = {}
 D[99] = 'mielonka'
 print(D[99])
@@ -100,9 +100,10 @@ print(D[99])
 Matrix = {}
 Matrix[(2, 3, 4)] = 88
 Matrix[(7, 8, 9)] = 99
+print(Matrix)
 
-if ((2,3,6) in Matrix):
-    print(Matrix[(2,3,6)])
+if (2, 3, 6) in Matrix:
+    print(Matrix[(2, 3, 6)])
 else:
     print(0)
 
@@ -111,11 +112,11 @@ try:
 except KeyError:
     print(0)
 
-print(Matrix.get((2,3,4), 0))
-print(Matrix.get((2,3,6), 0))
+print(Matrix.get((2, 3, 4), 0))
+print(Matrix.get((2, 3, 6), 0))
 
 mel = {'name': "mark",
-       'home': {'state': "pl", 'zip': "000"}}
+       'home': {'state': "pl", 'zip': "70400"}}
 print(mel['home']['zip'])
 
 D1 = dict([('name', 'mel'), ('age', 45)])
@@ -131,7 +132,8 @@ print(D)
 D = {k: ord(k) for k in ' mielonka '}
 print(D)
 
-print(D.keys(), D.values(), D.items())
+print(D.keys(), D.values())
+print(D.items())
 print(list(D.keys()), list(D.values()))
 
 for k in sorted(D):
