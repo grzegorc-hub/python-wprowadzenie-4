@@ -19,7 +19,7 @@ print(s, '\t', 10*'-')
 
 job = 'haker'
 for c in job: print(c, end=' ')
-print( "k" in job, "er" in job, 'hh' in job)
+print("k" in job, "er" in job, 'hh' in job)
 
 S = 'mielonka'
 print(S[0], S[-2])
@@ -41,7 +41,10 @@ help('chr')
 print(ord('s'), chr(115))
 
 i = int('1111', 2)
-print(i, bin(14))
+print(i, )
+b = bin(14)
+print(b)
+print(type(i), type(b))
 
 S = 'a-b-c-d'
 f = S.find('b')
@@ -56,6 +59,7 @@ L[2] = 'e'
 L[3] = 'j'
 S = ''.join(L)
 print(S)
+#S[0] = 'B' # blad!
 
 S = 'aaa,bbb ccc'
 cols = S.split(',')
