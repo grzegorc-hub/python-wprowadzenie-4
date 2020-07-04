@@ -27,5 +27,6 @@ print(x == y, x is y)  # cache!
 
 import sys # PEP 8
 print(sys.getrefcount(x))
+print(sys.getrefcount(y))
 print(sys.getrefcount(1))
 print(sys.getrefcount(L))
