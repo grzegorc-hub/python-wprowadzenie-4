@@ -12,7 +12,7 @@ print(dir(builtins))
 
 def hider():
     open = 'cos'
-    f = open('data3.txt')
+    f = open('resources/data3.txt')
 
 #hider()
 

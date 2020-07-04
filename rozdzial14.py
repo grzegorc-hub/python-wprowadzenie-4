@@ -1,8 +1,8 @@
-f = open('data3.txt')
+f = open('resources/data3.txt')
 print(f.__next__())
 print(f.__next__())
 
-for l in open('data3.txt'):
+for l in open('resources/data3.txt'):
     print(l, end='')
 
 L = [1, 2, 3]
@@ -27,10 +27,10 @@ print(D.keys())
 L = [x + 1 for x in L]
 print(L)
 
-L = [line.upper() for line in open('data3.txt')]
+L = [line.upper() for line in open('resources/data3.txt')]
 print(L)
 
-L = [line.upper() for line in open('data3.txt') if line[0] == 'M']
+L = [line.upper() for line in open('resources/data3.txt') if line[0] == 'M']
 print(L)
 
 L = ['aaa', 'bbb']
