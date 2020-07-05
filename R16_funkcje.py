@@ -13,6 +13,8 @@ test()
 test.aa = 3
 test()
 print(test.aa)
+print(type(test))
+print(dir(test))
 
 def times(x, y):
     return x * y
