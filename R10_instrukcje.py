@@ -1,18 +1,18 @@
 while True:
-    reply = input("Wpisz tekst: ")
+    reply = input("1. Wpisz tekst: ")
     if reply == 'stop': break
     print(reply.upper())
 
 
 while True:
-    reply = input("Wpisz tekst: ")
+    reply = input("2. Wpisz tekst: ")
     if reply == 'stop': break
     elif not reply.isdigit(): print('blad!')
-    else: print(int(reply ** 2))
+    else: print(int(reply) ** 2)
 
 
 while True:
-    reply = input("Wpisz tekst: ")
+    reply = input("3. Wpisz tekst: ")
     if reply == 'stop': break
     try:
         reply = int(reply)
@@ -22,7 +22,7 @@ while True:
         print(int(reply ** 2))
 
 while True:
-    reply = input("Wpisz tekst: ")
+    reply = input("4. Wpisz tekst: ")
     if reply == 'stop': break
     elif not reply.isdigit(): print('blad!')
     else:
