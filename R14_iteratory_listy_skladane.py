@@ -1,12 +1,13 @@
 f = open('resources/data3.txt')
 print(f.__next__())
 print(f.__next__())
+print(next(f))
 
 for l in open('resources/data3.txt'):
     print(l, end='')
 
 L = [1, 2, 3]
-I = iter(L)
+I = iter(L) # pozyskanie obiektu iteratora
 print(next(I))
 print(next(I))
 
@@ -22,7 +23,15 @@ while True:
         break;
 
 D = {}
-print(D.keys())
+print(D.keys()) # obiekt widoku (widoki nie sa iteratorami)
+print(type(D.keys()))
+
+DD = {1: 'a', 2: 'b'}
+#print(next(DD)) # blad
+print(next(iter(DD)))
+print(next(iter(DD.keys())))
+
+##########################################
 
 L = [x + 1 for x in L]
 print(L)
