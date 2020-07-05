@@ -1,4 +1,5 @@
-y = 253
+#y = 253
+y = 103
 
 x = y // 2                                   # Dla jakiegoś y > 1
 while x > 1:
@@ -17,7 +18,7 @@ else:                                        # Normalne wyjście
 
 T = [(1, 2), (3, 4), (5, 6)]
 for both in T:
-    a, b = both                             # Odpowiednik z przypisaniem ręcznym
+    a, b = both                               # Odpowiednik z przypisaniem ręcznym
     print(a, b)
 
 print(range(5))
@@ -32,7 +33,6 @@ for c in S[::2]: print(c, end=' ')
 L = [1,2,3,4,5]
 for i in range(len(L)):
     L[i] += 1
-
 print(L)
 
 L1 = [1,2,3]
