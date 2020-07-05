@@ -12,6 +12,10 @@ def square(x):
 class Employee:
    "dokumentacja klasy"
    pass
-print(square(4))
-print(square.__doc__)
 
+if __name__ == '__main__':
+   print(square(4))
+   print(square.__doc__)
+   print(Employee.__doc__)
+   print(globals().keys())
+   print(globals()['__doc__'])
