@@ -5,7 +5,7 @@ def func(Y):                                 # Y i Z przypisane w funkcji: lokal
    Z = X + Y                                 # X jest globalne
    return Z
 
-print( func(1) )                                      # func w module: wynik = 100
+print( func(1) )                             # func w module: wynik = 100
 
 import builtins
 print(dir(builtins))
@@ -54,9 +54,9 @@ def f1():
 f1()                                         # Wyświetla 88 — zmienną lokalną funkcji zawierającej
 
 
-def maker(N):                           # (funkcja fabryczna)
-    def action(X):                      # Utworzenie i zwrócenie funkcji action
-        return X ** N                    # Funkcja action zachowuje N z zakresu funkcji zawierającej
+def maker(N):                                # (funkcja fabryczna)
+    def action(X):                           # Utworzenie i zwrócenie funkcji action
+        return X ** N                        # Funkcja action zachowuje N z zakresu funkcji zawierającej
     return action
 
 f = maker(2)
@@ -75,4 +75,51 @@ F = tester(0)
 F('mielonka')
 F('cos')
 F('cos2')
+
+
+#################################
+
+
+x = 0
+def outer():
+    x = 1
+    def inner():
+        x = 2
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+outer()
+print("global:", x)
+
+
+x = 0
+def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        x = 2
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+outer()
+print("global:", x)
+
+
+x = 0
+def outer():
+    x = 1
+    def inner():
+        global x
+        x = 2
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+outer()
+print("global:", x)
 
