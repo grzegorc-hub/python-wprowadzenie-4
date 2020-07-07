@@ -20,13 +20,20 @@ for x,y in schedule:
 print(echo.__name__)
 print(echo.__code__.co_varnames)
 
-def func(a, b, c):
+def func1(a, b, c):
     return a + b + c
+print(func1(9,9,9))
 
-def func(a: 'mielonka', b: (1, 10), c: float) -> int:
+def func2(a: 'mielonka', b: (1, 10), c: float) -> int:
     return a + b + c
+print(func2.__annotations__)
+print(func2(9,9,9))
 
-print(func.__annotations__)
+def func3(a: 'mielonka' = 4, b: (1, 10) = 5, c: float = 6) -> int:
+    return a + b + c
+print(func3(9,9,9))
+print(func3(9,9))
+
 
 f = lambda x,y,z: x + y + z
 print( f(1,2,3) )
@@ -37,9 +44,11 @@ L = [(lambda x: x**2),                #Wewnętrzna definicja funkcji
 for f in L:
     print(f(2))
 
+
 c = [1,2,3,4,5]
 def inc(x): return x+10
 m = map(inc,c)
+print(m)
 print(list(m))
 m2 = map(lambda x:x+20, c)
 print(list(m2))
