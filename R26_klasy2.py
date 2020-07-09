@@ -1,3 +1,11 @@
+# Instrukcja class tworzy obiekt klasy i przypisuje go do nazwy (class jest instrukcja wykonywalna, kiedy Python do niej dojdzie, generuje nowy obietk klasy (tak jek np. obiekt funkcji)
+# Przypisania wewnątrz instrukcji class tworzą atrybuty klasy
+# Atrybuty klasy udostępniają stan obiektu oraz jego zachowanie (wspołdzielone przez wszystkie instancje utworzone z tej klasy)
+
+# Wywołanie obiektu klasy w sposób podobny do wywołania funkcji tworzy nowy obiekt instancji.
+# Każdy obiekt instancji dziedziczy atrybuty klasy oraz otrzymuje własną przestrzeń nazw.
+# Przypisania do atrybutów self w metodach tworzą atrybuty instancji.
+
 class FirstClass:
     def setdata(self, val):
         self.data = val
@@ -6,6 +14,10 @@ class FirstClass:
 
 x = FirstClass()
 y = FirstClass()
+
+print(type(FirstClass))
+print(type(x))
+
 x.setdata('djifs')
 y.setdata(8)
 x.display()
@@ -23,12 +35,12 @@ z = SecondClass()
 z.setdata(44)
 z.display()
 
-class ThirdClass(SecondClass):           # Dziedziczy po SecondClass
-   def __init__(self, value):            # Przy "ThirdClass(value)"
+class ThirdClass(SecondClass):               # Dziedziczy po SecondClass
+   def __init__(self, value):                # Przy "ThirdClass(value)"
       self.data = value
-   def __add__(self, other):             # Przy "self + other"
+   def __add__(self, other):                 # Przy "self + other"
       return ThirdClass(self.data + other)
-   def __str__(self):                    # Przy "print(self)", "str()"
+   def __str__(self):                        # Przy "print(self)", "str()"
       return '[ThirdClass: %s]' % self.data
    def mul(self, other):
       self.data *= other
