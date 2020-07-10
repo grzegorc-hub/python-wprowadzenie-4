@@ -1,5 +1,7 @@
 from abc import ABCMeta, abstractmethod
 
+# abstrakcyjna klasa nadrzędna
+
 class Super(metaclass=ABCMeta):
    def method(self):
       print('w Super.method')                # Zachowanie domyślne
@@ -26,24 +28,20 @@ class Provider(Super):  # Uzupełnienie wymaganej metody
    def action(self):
        print('w Provider.action')
 
+
 if __name__ == '__main__':
-   # for klass in (Inheritor, Replacer, Extender):
-   #     print('\n' + klass.__name__ + '...')
-   #     klass().method()
+
    print('\nProvider...')
    x = Provider()
    x.delegate()
 
+   #X = Super() # Can't instantiate abstract class Super with abstract methods action
 
-# Plik manynames.py
-X = 11                                     # Globalna zmienna/atrybut z modułu (X lub manynames.X)
-def f():
-   print(X)                                # Dostęp do zmiennej globalnej X (11)
-def g():
-   X = 22                                  # Zmienna lokalna (funkcji) — X ukrywa X z modułu
-   print(X)
-class C:
-   X = 33                                  # Atrybut klasy (C.X)
-   def m(self):
-      X = 44                               # Zmienna lokalna metody (X)
-      self.X = 55                          # Atrybut instancji (instance.X)
+   class Sub(Super): pass
+   #X = Sub() # Can't instantiate abstract class Sub with abstract methods action
+
+   class Sub(Super):
+      def action(self): print('mielonka')
+
+   X = Sub()
+   X.delegate()
