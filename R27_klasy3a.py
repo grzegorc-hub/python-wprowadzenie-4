@@ -19,8 +19,9 @@ from R27_klasy3 import Person, Manager # Załadowanie naszych klas
 bob = Person('Robert Zielony') # Ponowne utworzenie obiektów do przechowania
 anna = Person('Anna Czerwona', job='programista', pay=100000)
 tom = Manager('Tomasz Czarny', 50000)
+
 import shelve
-db = shelve.open('persondb') # Nazwa pliku, w którym przechowywane są obiekty
+db = shelve.open('resources/persondb') # Nazwa pliku, w którym przechowywane są obiekty
 for object in (bob, anna, tom): # Użycie atrybutu name obiektu jako klucza
- db[object.name] = object # Przechowanie obiektu w pliku shelve po kluczu
+    db[object.name] = object # Przechowanie obiektu w pliku shelve po kluczu
 db.close() # Zamknięcie po wprowadzeniu zmian
