@@ -1,4 +1,4 @@
-from rozdzial27 import Person
+from R27_klasy3 import Person
 
 bob = Person('Robert Kowal')
 print(bob)
@@ -15,7 +15,7 @@ for key in bob.__dict__:
     print(key, '=>', getattr(bob, key))
 
 
-from rozdzial27 import Person, Manager # Załadowanie naszych klas
+from R27_klasy3 import Person, Manager # Załadowanie naszych klas
 bob = Person('Robert Zielony') # Ponowne utworzenie obiektów do przechowania
 anna = Person('Anna Czerwona', job='programista', pay=100000)
 tom = Manager('Tomasz Czarny', 50000)
