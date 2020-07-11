@@ -3,7 +3,7 @@ assert 2==2
 
 
 try:
-    with open('data3') as myfile:
+    with open('resources/data3aa.txt') as myfile:
         for line in myfile:
             print(line)
 except Exception as X:
@@ -13,21 +13,36 @@ else:
 finally:
     print('koniec')
 
+
 import sys
 
 def action2():
-   print(1 + [])                             # Wygenerowanie wyjątku TypeError
+   print(1 + [])                                  # Wygenerowanie wyjątku TypeError
 
 def action1():
    try:
-      action2()
-   except TypeError:                         # Najbardziej aktualna pasująca instrukcja try
-      print(sys.exc_info())
-      print('wewnętrzne try')
+        action2()
+   except TypeError as e:                         # Najbardziej aktualna pasująca instrukcja try
+        print(sys.exc_info())
+        print('wewnętrzne try')
+        #print(e)
+        #raise e
 
 try:
    action1()
-except TypeError:                            # Tutaj tylko jeśli action1 ponownie zgłasza wyjątek
+except TypeError:                                  # Tutaj tylko jeśli action1 ponownie zgłasza wyjątek
    print('zewnętrzne try')
 
 print(sys.exc_info())
+
+
+class Bad(Exception):                              # Wyjątek zdefiniowany przez użytkownika
+    pass
+
+def doomed():
+    raise Bad()
+
+try:
+    doomed()
+except Bad:
+    print('przechwycenie Bad')
