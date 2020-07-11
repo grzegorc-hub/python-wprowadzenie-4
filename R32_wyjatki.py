@@ -1,6 +1,7 @@
 
 assert 2==2
 
+######################
 
 try:
     with open('resources/data3aa.txt') as myfile:
@@ -13,6 +14,8 @@ else:
 finally:
     print('koniec')
 
+
+#######################
 
 import sys
 
@@ -35,6 +38,8 @@ except TypeError:                                  # Tutaj tylko jeśli action1 
 
 print(sys.exc_info())
 
+
+###########################
 
 class Bad(Exception):                              # Wyjątek zdefiniowany przez użytkownika
     pass
