@@ -16,7 +16,7 @@ def raiser2():
 for func in (raiser1, raiser2):
    try:
       func()
-   #except General:                           # Dopasowanie General lub którejś z jej podklas
+   #except General:                           # Dopasowanie General lub którejś z jej podklas. Lepsze niz lista wyjatkow, bo mozna zpomniec o jakis, lub gdy dochodzi nowy to trzeba pamietac aby go dodac
    except(Specific1, Specific2):
       import sys
       print('przechwycono:', sys.exc_info()[0])
