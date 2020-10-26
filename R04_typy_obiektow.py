@@ -78,6 +78,8 @@ print(v1, v2)
 #  sety  #
 ##########
 S = {x for x in "aaabbbccc"}
+print(S)
+print(type(S))
 
 
 ###########
