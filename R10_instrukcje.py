@@ -18,7 +18,7 @@ while True:
         reply = int(reply)
     except:
         print('blad!')
-    else:
+    else: # kiedy żaden wyjątek nie zostanie zgłoszony w części try.
         print(int(reply ** 2))
 
 while True:

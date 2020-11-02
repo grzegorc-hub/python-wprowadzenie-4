@@ -23,13 +23,18 @@ while True:
         break;
 
 D = {}
-print(D.keys()) # obiekt widoku (widoki nie sa iteratorami)
+print(D.keys()) # nie lista, a obiekt widoku (widoki nie sa iteratorami)
 print(type(D.keys()))
 
 DD = {1: 'a', 2: 'b'}
 #print(next(DD)) # blad
 print(next(iter(DD)))
 print(next(iter(DD.keys())))
+view_on_keys = DD.keys()
+print(dir(view_on_keys))
+# The objects returned by dict.keys(), dict.values() and dict.items() are view objects
+# They provide a dynamic view on the dictionary’s entries, which means that when the dictionary changes, the view reflects these changes.
+# Dictionary views can be iterated over to yield their respective data, and support membership tests.
 
 ##########################################
 

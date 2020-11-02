@@ -4,8 +4,10 @@ R22_moduly2a.printer("joerjf")
 from R22_moduly2a import printer
 printer("iieji")
 
-from R22_moduly2b import spam
+from R22_moduly2b import *
 print(spam)
+print(spam2)
+#print(spam3)
 
 from R22_moduly2a import *
 printer("dsfsdf")

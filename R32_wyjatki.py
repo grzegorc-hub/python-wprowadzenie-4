@@ -51,3 +51,17 @@ try:
     doomed()
 except Bad:
     print('przechwycenie Bad')
+
+
+def test01():
+    try:
+        doomed()
+    except Bad:
+        print("except called")
+        return 1
+    finally:
+        print("finally called")
+        return 2
+
+a = test01()
+print(a)

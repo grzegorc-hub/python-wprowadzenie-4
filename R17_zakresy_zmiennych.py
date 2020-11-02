@@ -123,3 +123,20 @@ def outer():
 outer()
 print("global:", x)
 
+#########################################
+
+print("globals: ", globals())
+print("locals: ", locals())
+print("vars: ", vars())
+
+def foo():
+    a = 11
+    print("globals: ", globals())
+    print("locals: ", locals())
+    print("vars: ", vars())
+
+foo()
+
+
+
+

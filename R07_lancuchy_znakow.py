@@ -103,6 +103,3 @@ message2 = f"Hi {name}. " \
            f"You are a {profession}. "
 print(message1)
 print(message2)
-
-
-

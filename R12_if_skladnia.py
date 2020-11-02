@@ -16,9 +16,9 @@ branch = {'mielonka': 1.25,
           'jajka': 0.99}
 print(branch.get('mielonka', 'Zły wybór'))
 
-print(2 > 3) # True/False
-print(2 > 3 or [1,2]) # obiekt
-print([] or 3)
+print(2 > 3) # Porównania wielkości zwracają True/False
+print(4 > 3 or [1,2]) # operatory 'and' oraz 'or' zawsze zwracają obiekt
+print([] or 3) # analizuje obiekty argumentów od lewej do prawej strony i zwraca pierwszy będący prawdą. Co więcej, po odnalezieniu pierwszego prawdziwego argumentu Python zatrzymuje wyszukiwanie
 
 X = 1
 Y = 2

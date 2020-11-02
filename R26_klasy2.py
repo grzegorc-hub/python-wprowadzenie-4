@@ -7,19 +7,22 @@
 # Przypisania do atrybutów self w metodach tworzą atrybuty instancji.
 
 class FirstClass:
+    a = 44
     def setdata(self, val):
         self.data = val
     def display(self):
-        print(self.data)
+        print(self.data, self.a)
 
 x = FirstClass()
 y = FirstClass()
 
 print(type(FirstClass))
 print(type(x))
+print((x.a))
 
 x.setdata('djifs')
 y.setdata(8)
+x.a = 55
 x.display()
 y.display()
 
