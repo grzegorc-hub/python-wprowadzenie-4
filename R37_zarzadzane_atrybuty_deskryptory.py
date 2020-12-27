@@ -94,7 +94,7 @@ print('-' * 20)
 
 class Descriptorr(object):
     def __get__(self, instance, owner):
-        print(self, instance, owner, sep='\n')
+        print(self, instance, owner, sep='-')
 
 class Subject:
     attr = Descriptorr()                 # Instancja klasy Descriptor jest atrybutem klasy

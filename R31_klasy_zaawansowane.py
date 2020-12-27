@@ -71,5 +71,16 @@ c.printNumInstances()
 # Metody statyczne - wywołuje się bez przekazywania obiektu instancji
 # Metody klas - tak jak zwykłe metody, ale Python zamiast instancji przekazuje do nich klasę
 
+# class MyClass:
+#     def method(self):
+#         return 'instance method called', self
+#
+#     @classmethod
+#     def classmethod(cls):
+#         return 'class method called', cls
+#
+#     @staticmethod
+#     def staticmethod():
+#         return 'static method called'
 
 
