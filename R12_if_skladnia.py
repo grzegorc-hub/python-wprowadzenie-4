@@ -20,7 +20,7 @@ print(2 > 3) # Porównania wielkości zwracają True/False
 print(4 > 3 or [1,2]) # operatory 'and' oraz 'or' zawsze zwracają obiekt
 print([] or 3) # analizuje obiekty argumentów od lewej do prawej strony i zwraca pierwszy będący prawdą. Co więcej, po odnalezieniu pierwszego prawdziwego argumentu Python zatrzymuje wyszukiwanie
 
-X = 1
+X = 0
 Y = 2
 Z = 3
 if X:

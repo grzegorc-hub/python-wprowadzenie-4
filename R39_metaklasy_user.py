@@ -8,3 +8,11 @@ class Derived(Base):
 
 I = Derived()
 print(I.foo())
+
+
+class Derived2(Base):
+    ...
+
+
+I2 = Derived2()
+print(I2.foo())

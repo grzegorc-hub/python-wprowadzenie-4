@@ -1,4 +1,5 @@
-# Instrukcja class tworzy obiekt klasy i przypisuje go do nazwy (class jest instrukcja wykonywalna, kiedy Python do niej dojdzie, generuje nowy obietk klasy (tak jek np. obiekt funkcji)
+# Instrukcja class tworzy obiekt klasy i przypisuje go do nazwy (class jest instrukcja wykonywalna,
+# kiedy Python do niej dojdzie, generuje nowy obietk klasy (tak jek np. obiekt funkcji)
 # Przypisania wewnątrz instrukcji class tworzą atrybuty klasy
 # Atrybuty klasy udostępniają stan obiektu oraz jego zachowanie (wspołdzielone przez wszystkie instancje utworzone z tej klasy)
 

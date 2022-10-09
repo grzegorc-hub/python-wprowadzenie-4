@@ -93,9 +93,9 @@ print(data)
 values = struct.unpack('ih', data)
 print(values)
 
-with open(r'C:\Users\Maciek\PycharmProjects\python_wprowadzenie\data3.txt') as myfile:
-    for line in myfile:
-        print(line)
+# with open(r'C:\Users\Maciek\PycharmProjects\python_wprowadzenie\data3.txt') as myfile:
+#     for line in myfile:
+#         print(line)
 
 #################
 

@@ -47,6 +47,8 @@ print("i=", i)
 b = bin(14)
 print(b)
 print(type(i), type(b))
+h = '0xff'
+print(int(h,16))
 
 S = 'a-b-c-d'
 f = S.find('b')

@@ -1,5 +1,6 @@
 X = 0
 
+
 if X:
     def func1():
         print("1")
